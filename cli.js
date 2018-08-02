@@ -1,16 +1,24 @@
 #!/usr/bin/env node
 const inquirer = require('inquirer');
 const icons = require('@mdi/svg/meta.json');
+const Fuse = require('fuse.js');
 
 inquirer.registerPrompt('checkbox-plus', require('inquirer-checkbox-plus-prompt'));
+
+const fuse = new Fuse(icons, {
+    shouldSort: true,
+    threshold: 0,
+    keys: ['name', 'aliases']
+});
 
 inquirer.prompt([{
     type: 'checkbox-plus',
     name: 'iconNames',
     message: 'Icon names:',
     source(answers, input) {
-        const iconNames = icons.map(icon => icon.name);
-        return Promise.resolve(iconNames);
+        return input
+            ? Promise.resolve(fuse.search(input))
+            : Promise.resolve(icons.map(icon => icon.name));
     },
     searchable: true,
     highlight: true
