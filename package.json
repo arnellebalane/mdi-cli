@@ -22,5 +22,8 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "@mdi/svg": "2.5.94"
   }
 }
