@@ -17,6 +17,9 @@
   ],
   "author": "Arnelle Balane <arnellebalane@gmail.com> (https://arnellebalane.com/)",
   "license": "MIT",
+  "dependencies": {
+    "@mdi/svg": "2.5.94"
+  },
   "devDependencies": {
     "commitizen": "2.10.1",
     "cz-conventional-changelog": "2.1.0"
@@ -25,8 +28,5 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  },
-  "dependencies": {
-    "@mdi/svg": "2.5.94"
   }
 }
