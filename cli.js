@@ -2,6 +2,8 @@
 const inquirer = require('inquirer');
 const icons = require('@mdi/svg/meta.json');
 
+inquirer.registerPrompt('checkbox-plus', require('inquirer-checkbox-plus-prompt'));
+
 inquirer.prompt([{
     type: 'input',
     name: 'iconSize',
