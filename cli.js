@@ -5,6 +5,16 @@ const icons = require('@mdi/svg/meta.json');
 inquirer.registerPrompt('checkbox-plus', require('inquirer-checkbox-plus-prompt'));
 
 inquirer.prompt([{
+    type: 'checkbox-plus',
+    name: 'iconNames',
+    message: 'Icon names:',
+    source(answers, input) {
+        const iconNames = icons.map(icon => icon.name);
+        return Promise.resolve(iconNames);
+    },
+    searchable: true,
+    highlight: true
+}, {
     type: 'input',
     name: 'iconSize',
     message: 'Icon size (px):',
