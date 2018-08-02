@@ -18,7 +18,8 @@
   "author": "Arnelle Balane <arnellebalane@gmail.com> (https://arnellebalane.com/)",
   "license": "MIT",
   "dependencies": {
-    "@mdi/svg": "2.5.94"
+    "@mdi/svg": "2.5.94",
+    "inquirer": "6.0.0"
   },
   "devDependencies": {
     "commitizen": "2.10.1",
