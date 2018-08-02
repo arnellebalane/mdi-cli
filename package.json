@@ -19,7 +19,8 @@
   "license": "MIT",
   "dependencies": {
     "@mdi/svg": "2.5.94",
-    "inquirer": "6.0.0"
+    "inquirer": "6.0.0",
+    "inquirer-checkbox-plus-prompt": "1.0.1"
   },
   "devDependencies": {
     "commitizen": "2.10.1",
