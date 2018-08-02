@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Generate material design icons from the command line",
   "main": "index.js",
+  "bin": {
+    "mdi": "cli.js"
+  },
   "scripts": {
     "commit": "git-cz"
   },
