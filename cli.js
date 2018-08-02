@@ -20,8 +20,7 @@ inquirer.prompt([{
             ? Promise.resolve(fuse.search(input))
             : Promise.resolve(icons.map(icon => icon.name));
     },
-    searchable: true,
-    highlight: true
+    searchable: true
 }, {
     type: 'input',
     name: 'iconSize',
