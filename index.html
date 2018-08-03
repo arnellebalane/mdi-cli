@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <title>mdi-cli</title>
+
+        <style>
+            img {
+                display: block;
+            }
+
+            div {
+                display: inline-block;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script>
+            const params = new URLSearchParams(location.search);
+            const icons = params.get('icons').split(',');
+            const size = Number(params.get('size'));
+            const padding = Number(params.get('padding'));
+
+            icons.forEach(icon => {
+                const img = document.createElement('img');
+                img.src = `node_modules/@mdi/svg/svg/${icon}.svg`;
+                img.style.width = size + 'px';
+                img.style.height = size + 'px';
+
+                const div = document.createElement('div');
+                div.style.padding = padding + 'px';
+
+                div.appendChild(img);
+                document.body.appendChild(div);
+            });
+            console.log(location.search);
+        </script>
+    </body>
+</html>
