@@ -39,6 +39,12 @@ const promptOptions = [{
     filter: Number
 }, {
     type: 'input',
+    name: 'borderRadius',
+    message: 'Border radius (px):',
+    default: 0,
+    filter: Number
+}, {
+    type: 'input',
     name: 'foregroundColor',
     message: 'Foreground color:',
     default: '#333'
