@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 const icons = require('@mdi/svg/meta.json');
 const Fuse = require('fuse.js');
 const chalk = require('chalk');
+const ora = require('ora');
 const generateIcons = require('./index');
 
 inquirer.registerPrompt('checkbox-plus', require('inquirer-checkbox-plus-prompt'));
@@ -12,6 +13,7 @@ const fuse = new Fuse(icons, {
     threshold: 0,
     keys: ['name', 'aliases']
 });
+const spinner = ora('Generating icons');
 
 const promptOptions = [{
     type: 'checkbox-plus',
@@ -49,9 +51,12 @@ const promptOptions = [{
 
 (async () => {
     const answers = await inquirer.prompt(promptOptions);
-    const iconPaths = await generateIcons(answers);
 
-    console.log();
+    spinner.start();
+    const iconPaths = await generateIcons(answers);
+    spinner.stop();
+
+    console.log(); // Add an extra separator line
     iconPaths.forEach(iconPath => {
         console.log(`  Created ${chalk.green(iconPath)}`);
     });
