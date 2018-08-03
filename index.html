@@ -4,36 +4,22 @@
         <title>mdi-cli</title>
 
         <style>
-            img {
+            svg {
                 display: block;
+                width: {{iconSize}}px;
+                height: {{iconSize}}px;
             }
 
             div {
                 display: inline-block;
+                padding: {{iconPadding}}px;
             }
         </style>
     </head>
 
     <body>
-        <script>
-            const params = new URLSearchParams(location.search);
-            const iconNames = params.get('iconNames').split(',');
-            const iconSize = Number(params.get('iconSize'));
-            const iconPadding = Number(params.get('iconPadding'));
-
-            iconNames.forEach(iconName => {
-                const img = document.createElement('img');
-                img.src = `node_modules/@mdi/svg/svg/${iconName}.svg`;
-                img.style.width = iconSize + 'px';
-                img.style.height = iconSize + 'px';
-
-                const div = document.createElement('div');
-                div.style.padding = iconPadding + 'px';
-                div.id = iconName;
-
-                div.appendChild(img);
-                document.body.appendChild(div);
-            });
-        </script>
+        {{#icons}}
+            <div id="{{name}}">{{{content}}}</div>
+        {{/icons}}
     </body>
 </html>
