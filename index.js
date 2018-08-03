@@ -18,12 +18,15 @@ module.exports = async config => {
     await page.goto(getPageUrl(config));
 
     const iconNames = await page.$$eval('div', divs => divs.map(div => div.id));
+    const iconPaths = iconNames.map(iconName => `${iconName}.png`);
     const iconHandles = await page.$$('div');
 
     await Promise.all(iconHandles.map((iconHandle, i) => iconHandle.screenshot({
-        path: iconNames[i] + '.png',
+        path: iconPaths[i],
         omitBackground: true
     })));
 
     await browser.close();
+
+    return iconPaths;
 };
