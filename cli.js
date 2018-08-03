@@ -25,12 +25,14 @@ inquirer.prompt([{
     type: 'input',
     name: 'iconSize',
     message: 'Icon size (px):',
-    default: 24
+    default: 24,
+    filter: Number
 }, {
     type: 'input',
     name: 'iconPadding',
     message: 'Icon padding (px):',
-    default: 0
+    default: 0,
+    filter: Number
 }, {
     type: 'input',
     name: 'foregroundColor',
@@ -40,6 +42,5 @@ inquirer.prompt([{
     type: 'input',
     name: 'backgroundColor',
     message: 'Background color:',
-    default: 'none',
-    filter: value => value === 'none' ? 'transparent' : value
+    default: 'transparent'
 }]).then(console.log);
