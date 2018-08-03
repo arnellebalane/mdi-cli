@@ -21,7 +21,8 @@
     "@mdi/svg": "2.5.94",
     "fuse.js": "3.2.1",
     "inquirer": "6.0.0",
-    "inquirer-checkbox-plus-prompt": "1.0.1"
+    "inquirer-checkbox-plus-prompt": "1.0.1",
+    "puppeteer": "1.6.2"
   },
   "devDependencies": {
     "commitizen": "2.10.1",
