@@ -1,3 +1,4 @@
+const path = require('path');
 const puppeteer = require('puppeteer');
 
 function getPageUrl(config) {
@@ -18,7 +19,8 @@ module.exports = async config => {
     await page.goto(getPageUrl(config));
 
     const iconNames = await page.$$eval('div', divs => divs.map(div => div.id));
-    const iconPaths = iconNames.map(iconName => `${iconName}.png`);
+    const iconPaths = iconNames.map(
+        iconName => path.join(config.outputPath, `${iconName}.png`));
     const iconHandles = await page.$$('div');
 
     await Promise.all(iconHandles.map((iconHandle, i) => iconHandle.screenshot({
