@@ -58,6 +58,6 @@ const promptOptions = [{
 
     console.log(); // Add an extra separator line
     iconPaths.forEach(iconPath => {
-        console.log(`  Created ${chalk.green(iconPath)}`);
+        console.log(`  Generated ${chalk.green(iconPath)}`);
     });
 })();
