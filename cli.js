@@ -47,6 +47,14 @@ const promptOptions = [{
     name: 'backgroundColor',
     message: 'Background color:',
     default: 'transparent'
+}, {
+    type: 'input',
+    name: 'outputPath',
+    message: 'Output path:',
+    default: 'current directory',
+    filter(input) {
+        return input === 'current directory' ? '.' : input;
+    }
 }];
 
 (async () => {
