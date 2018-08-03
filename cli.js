@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const icons = require('@mdi/svg/meta.json');
 const Fuse = require('fuse.js');
+const generateIcons = require('./index');
 
 inquirer.registerPrompt('checkbox-plus', require('inquirer-checkbox-plus-prompt'));
 
@@ -43,4 +44,4 @@ inquirer.prompt([{
     name: 'backgroundColor',
     message: 'Background color:',
     default: 'transparent'
-}]).then(console.log);
+}]).then(generateIcons);
