@@ -1,16 +1,27 @@
+const fs = require('fs');
 const path = require('path');
 const puppeteer = require('puppeteer');
+const handlebars = require('handlebars');
+
+const templatePath = path.resolve(__dirname, 'index.html');
+const iconsBasePath = path.resolve(__dirname, 'node_modules/@mdi/svg/svg')
 
 function getPageUrl(config) {
-    const params = [
-        `iconNames=${config.iconNames.join(',')}`,
-        `iconSize=${config.iconSize}`,
-        `iconPadding=${config.iconPadding}`,
-        `foregroundColor=${config.foregroundColor}`,
-        `backgroundColor=${config.backgroundColor}`
-    ].join('&');
+    const templateContents = fs.readFileSync(templatePath, 'utf8');
+    const template = handlebars.compile(templateContents);
 
-    return `file://${__dirname}/index.html?${params}`;
+    config.icons = config.iconNames.map(iconName => {
+        const iconPath = path.resolve(iconsBasePath, iconName + '.svg');
+        const iconContents = fs.readFileSync(iconPath, 'utf8');
+        const svgIndex = iconContents.indexOf('<svg');
+        const icon = iconContents.slice(svgIndex);
+        return {name: iconName, content: icon};
+    });
+
+    const rendered = template(config);
+    const base64 = Buffer.from(rendered).toString('base64');
+
+    return 'data:text/html;base64,' + base64;
 }
 
 module.exports = async config => {
@@ -20,7 +31,7 @@ module.exports = async config => {
 
     const iconNames = await page.$$eval('div', divs => divs.map(div => div.id));
     const iconPaths = iconNames.map(
-        iconName => path.join(config.outputPath, `${iconName}.png`));
+        iconName => path.resolve(config.outputPath, `${iconName}.png`));
     const iconHandles = await page.$$('div');
 
     await Promise.all(iconHandles.map((iconHandle, i) => iconHandle.screenshot({
