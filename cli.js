@@ -12,7 +12,7 @@ const fuse = new Fuse(icons, {
     keys: ['name', 'aliases']
 });
 
-inquirer.prompt([{
+const promptOptions = [{
     type: 'checkbox-plus',
     name: 'iconNames',
     message: 'Icon names:',
@@ -44,4 +44,9 @@ inquirer.prompt([{
     name: 'backgroundColor',
     message: 'Background color:',
     default: 'transparent'
-}]).then(generateIcons);
+}];
+
+(async () => {
+    const answers = await inquirer.prompt(promptOptions);
+    await generateIcons(answers);
+})();
