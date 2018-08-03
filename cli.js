@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const icons = require('@mdi/svg/meta.json');
 const Fuse = require('fuse.js');
+const chalk = require('chalk');
 const generateIcons = require('./index');
 
 inquirer.registerPrompt('checkbox-plus', require('inquirer-checkbox-plus-prompt'));
@@ -48,5 +49,10 @@ const promptOptions = [{
 
 (async () => {
     const answers = await inquirer.prompt(promptOptions);
-    await generateIcons(answers);
+    const iconPaths = await generateIcons(answers);
+
+    console.log();
+    iconPaths.forEach(iconPath => {
+        console.log(`  Created ${chalk.green(iconPath)}`);
+    });
 })();
