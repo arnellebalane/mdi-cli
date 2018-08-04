@@ -1,6 +1,6 @@
 {
   "name": "mdi-cli",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Generate material design icons from the command line",
   "main": "index.js",
   "bin": {
