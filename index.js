@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer');
 const handlebars = require('handlebars');
 
 const templatePath = path.resolve(__dirname, 'index.html');
-const iconsBasePath = path.resolve(__dirname, 'node_modules/@mdi/svg/svg')
+const iconsBasePath = path.resolve(__dirname, 'node_modules/@mdi/svg/svg');
 
 function getPageUrl(config) {
     const templateContents = fs.readFileSync(templatePath, 'utf8');
