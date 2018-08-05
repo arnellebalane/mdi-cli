@@ -32,7 +32,8 @@
     "commitizen": "2.10.1",
     "cz-conventional-changelog": "2.1.0",
     "eslint": "5.3.0",
-    "ghooks": "2.0.4"
+    "ghooks": "2.0.4",
+    "meow": "5.0.0"
   },
   "config": {
     "commitizen": {
