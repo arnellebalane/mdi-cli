@@ -34,7 +34,7 @@ This tool allows:
 1. Generating multiple icons with the same style
 2. Generating icons even when you're offline
 
-However, this also comes with its own downsides:
+However, this also comes with its own limitations:
 
 1. No icon preview while generating, so you kinda have to know the names of the icons that you need
 
