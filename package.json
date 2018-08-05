@@ -16,6 +16,11 @@
     "icons",
     "cli"
   ],
+  "files": [
+    "cli.js",
+    "index.js",
+    "index.html"
+  ],
   "author": "Arnelle Balane <arnellebalane@gmail.com> (https://arnellebalane.com/)",
   "license": "MIT",
   "dependencies": {
