@@ -17,7 +17,7 @@ const spinner = ora('Generating icons');
 
 const promptOptions = [{
     type: 'checkbox-plus',
-    name: 'iconNames',
+    name: 'names',
     message: 'Icon names:',
     source(answers, input) {
         return input
