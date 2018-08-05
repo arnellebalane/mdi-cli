@@ -31,7 +31,7 @@ module.exports = async config => {
 
     const iconNames = await page.$$eval('div', divs => divs.map(div => div.id));
     const iconPaths = iconNames.map(
-        iconName => path.resolve(config.outputPath, `${iconName}.png`));
+        iconName => path.resolve(config.output, `${iconName}.png`));
     const iconHandles = await page.$$('div');
 
     await Promise.all(iconHandles.map((iconHandle, i) => iconHandle.screenshot({
