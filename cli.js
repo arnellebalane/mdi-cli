@@ -27,35 +27,35 @@ const promptOptions = [{
     searchable: true
 }, {
     type: 'input',
-    name: 'iconSize',
+    name: 'size',
     message: 'Icon size (px):',
     default: 24,
     filter: Number
 }, {
     type: 'input',
-    name: 'iconPadding',
+    name: 'padding',
     message: 'Icon padding (px):',
     default: 0,
     filter: Number
 }, {
     type: 'input',
-    name: 'borderRadius',
+    name: 'radius',
     message: 'Border radius (px):',
     default: 0,
     filter: Number
 }, {
     type: 'input',
-    name: 'foregroundColor',
+    name: 'foreground',
     message: 'Foreground color:',
     default: '#333'
 }, {
     type: 'input',
-    name: 'backgroundColor',
+    name: 'background',
     message: 'Background color:',
     default: 'transparent'
 }, {
     type: 'input',
-    name: 'outputPath',
+    name: 'output',
     message: 'Output path:',
     default: 'current directory',
     filter(input) {
