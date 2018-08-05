@@ -1,9 +1,14 @@
 language: node_js
 
+cache:
+    directories:
+        - ~/.npm
+
 node_js: 8
 
-deploy:
-    provider: script
-    skip_cleanup: true
-    script:
-        - npx semantic-release
+after_success:
+    - npx semantic-release
+
+branches:
+    only:
+        - master
