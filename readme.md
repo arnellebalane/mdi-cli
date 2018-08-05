@@ -38,7 +38,7 @@ $ mdi --help
     --output, -o       Write icons to this directory. Defaults to the current directory.
 
   Examples:
-    $ mdi -s 32 -p 4 -r 5 -f #aaa -b #fff
+    $ mdi -s 32 -p 4 -r 5 -f yellow -b black google youtube twitter
 ```
 
 
