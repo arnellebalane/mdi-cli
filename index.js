@@ -10,7 +10,7 @@ function getPageUrl(config) {
     const templateContents = fs.readFileSync(templatePath, 'utf8');
     const template = handlebars.compile(templateContents);
 
-    config.icons = config.iconNames.map(iconName => {
+    config.icons = config.names.map(iconName => {
         const iconPath = path.resolve(iconsBasePath, iconName + '.svg');
         const iconContents = fs.readFileSync(iconPath, 'utf8');
         const svgIndex = iconContents.indexOf('<svg');
