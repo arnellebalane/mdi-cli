@@ -17,19 +17,19 @@ const fuse = new Fuse(icons, {
 const spinner = ora('Generating icons');
 
 const cli = meow(`
-  Usage:
-    $ mdi [options] <icon-name>, <icon-name>, ...
+  ${chalk.cyan.underline('Usage:')}
+    ${chalk.gray('$')} ${chalk.green('mdi')} ${chalk.yellow('[options]')} ${chalk.magenta('<icon-name> <icon-name> ...')}
 
-  Options:
-    --size, -s         Set the icon size. Defaults to 24px.
-    --padding, -p      Set the icon padding. Defaults to 0px.
-    --radius, -r       Set the icon border radius. Defaults to 0px.
-    --foreground, -f   Set the icon foreground color. Defaults to #333.
-    --background, -b   Set the icon background color. Defaults to transparent.
-    --output, -o       Write icons to this directory. Defaults to the current directory.
+  ${chalk.cyan.underline('Options:')}
+    ${chalk.yellow('--size')}, ${chalk.yellow('-s')}         ${chalk.gray('Set the icon size. Defaults to 24px.')}
+    ${chalk.yellow('--padding')}, ${chalk.yellow('-p')}      ${chalk.gray('Set the icon padding. Defaults to 0px.')}
+    ${chalk.yellow('--radius')}, ${chalk.yellow('-r')}       ${chalk.gray('Set the icon border radius. Defaults to 0px.')}
+    ${chalk.yellow('--foreground')}, ${chalk.yellow('-f')}   ${chalk.gray('Set the icon foreground color. Defaults to #333.')}
+    ${chalk.yellow('--background')}, ${chalk.yellow('-b')}   ${chalk.gray('Set the icon background color. Defaults to transparent.')}
+    ${chalk.yellow('--output')}, ${chalk.yellow('-o')}       ${chalk.gray('Write icons to this directory. Defaults to the current directory.')}
 
-  Examples:
-    $ mdi -s 32 -p 4 -r 5 -f #aaa -b #fff
+  ${chalk.cyan.underline('Examples:')}
+    ${chalk.gray('$')} ${chalk.green('mdi')} ${chalk.yellow('-s 32 -p 4 -r 5 -f #aaa -b #fff')} ${chalk.magenta('google youtube twitter')}
 `, {
     flags: {
         size: {
