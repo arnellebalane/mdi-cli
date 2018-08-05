@@ -1,3 +1,7 @@
+<div style="text-align: center">
+    ![icon](icon.png)
+</div>
+
 # mdi-cli
 
 Generate material design icons from the command line.
