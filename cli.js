@@ -115,10 +115,16 @@ const promptOptions = [{
 }];
 
 (async () => {
-    const answers = await inquirer.prompt(promptOptions);
+    const useBuilder = process.argv.length === 2;
+    const config = useBuilder
+        ? await inquirer.prompt(promptOptions)
+        : cli.flags;
+    if (!useBuilder) {
+        config.names = cli.input;
+    }
 
     spinner.start();
-    const iconPaths = await generateIcons(answers);
+    const iconPaths = await generateIcons(config);
     spinner.stop();
 
     console.log(); // Add an extra separator line
