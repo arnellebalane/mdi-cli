@@ -7,7 +7,8 @@
     "mdi": "cli.js"
   },
   "scripts": {
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "lint": "eslint *.js"
   },
   "keywords": [
     "mdi",
@@ -36,6 +37,9 @@
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-push": "npm run lint"
     }
   }
 }
