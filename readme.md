@@ -15,9 +15,31 @@ $ npm install -g mdi-cli
 
 ## Usage
 
-Installing this package globally will give you the `mdi` command. Take a look at this GIF of how to use this command:
+Installing this package globally will give you the `mdi` command. Take a look at this GIF of how to use this it interactively:
 
 ![Usage Example](example.gif)
+
+You may also use `mdi` non-interactively, by providing flags and arguments when you run it:
+
+```bash
+$ mdi --help
+
+  Generate material design icons from the command line
+
+  Usage:
+    $ mdi [options] <icon-name>, <icon-name>, ...
+
+  Options:
+    --size, -s         Set the icon size. Defaults to 24px.
+    --padding, -p      Set the icon padding. Defaults to 0px.
+    --radius, -r       Set the icon border radius. Defaults to 0px.
+    --foreground, -f   Set the icon foreground color. Defaults to #333.
+    --background, -b   Set the icon background color. Defaults to transparent.
+    --output, -o       Write icons to this directory. Defaults to the current directory.
+
+  Examples:
+    $ mdi -s 32 -p 4 -r 5 -f #aaa -b #fff
+```
 
 
 ## Why did I build this?
