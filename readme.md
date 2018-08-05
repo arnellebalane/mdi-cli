@@ -1,5 +1,5 @@
 <div style="text-align: center">
-    ![icon](icon.png)
+    <img src="icon.png" alt="mdi-cli icon">
 </div>
 
 # mdi-cli
