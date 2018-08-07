@@ -27,12 +27,10 @@
     "@mdi/svg": "2.5.94",
     "chalk": "2.4.1",
     "fuse.js": "3.2.1",
-    "handlebars": "4.0.11",
     "inquirer": "6.0.0",
     "inquirer-checkbox-plus-prompt": "1.0.1",
     "meow": "5.0.0",
-    "ora": "3.0.0",
-    "puppeteer": "1.6.2"
+    "ora": "3.0.0"
   },
   "devDependencies": {
     "commitizen": "2.10.1",
