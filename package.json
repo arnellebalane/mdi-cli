@@ -17,9 +17,7 @@
     "cli"
   ],
   "files": [
-    "index.js",
-    "icon.png",
-    "example.gif"
+    "index.js"
   ],
   "author": "Arnelle Balane <arnellebalane@gmail.com> (https://arnellebalane.com/)",
   "license": "MIT",
