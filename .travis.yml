@@ -6,6 +6,9 @@ cache:
 
 node_js: 8
 
+script:
+    - npm run lint
+
 after_success:
     - npx semantic-release
 
