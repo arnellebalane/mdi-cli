@@ -4,7 +4,7 @@
   "description": "Generate material design icons from the command line",
   "main": "index.js",
   "bin": {
-    "mdi": "cli.js"
+    "mdi": "index.js"
   },
   "scripts": {
     "commit": "git-cz",
@@ -17,9 +17,9 @@
     "cli"
   ],
   "files": [
-    "cli.js",
     "index.js",
-    "index.html"
+    "icon.png",
+    "example.gif"
   ],
   "author": "Arnelle Balane <arnellebalane@gmail.com> (https://arnellebalane.com/)",
   "license": "MIT",
