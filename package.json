@@ -27,9 +27,9 @@
     "@mdi/svg": "2.5.94",
     "chalk": "2.4.1",
     "fuse.js": "3.2.1",
-    "inquirer": "6.0.0",
+    "inquirer": "6.1.0",
     "inquirer-checkbox-plus-prompt": "1.0.1",
-    "mdi-core": "1.0.0",
+    "mdi-core": "1.0.1",
     "meow": "5.0.0",
     "ora": "3.0.0"
   },
