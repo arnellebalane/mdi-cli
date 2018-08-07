@@ -5,7 +5,7 @@ const Fuse = require('fuse.js');
 const chalk = require('chalk');
 const ora = require('ora');
 const meow = require('meow');
-const generateIcons = require('./index');
+const mdi = require('mdi-core');
 
 inquirer.registerPrompt('checkbox-plus', require('inquirer-checkbox-plus-prompt'));
 
@@ -124,7 +124,7 @@ const promptOptions = [{
     }
 
     spinner.start();
-    const iconPaths = await generateIcons(config);
+    const iconPaths = await mdi(config);
     spinner.stop();
 
     console.log(); // Add an extra separator line
