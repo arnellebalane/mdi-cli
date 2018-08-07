@@ -65,6 +65,11 @@ However, this also comes with its own limitations:
 1. No icon preview while generating, so you kinda have to know the names of the icons that you need
 
 
+## Related Projects
+
+- [mdi-core][3]: Node module for generating Material Design icons.
+
+
 ## License
 
 MIT License
@@ -72,3 +77,4 @@ MIT License
 
 [1]: https://github.com/Templarian/MaterialDesign-SVG
 [2]: https://materialdesignicons.com/
+[3]: https://github.com/arnellebalane/mdi-core
