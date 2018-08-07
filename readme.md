@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="icon.png" alt="mdi-cli icon">
+    <img src="https://cdn.arnellebalane.com/github/mdi-cli/icon.png" alt="mdi-cli icon">
 </p>
 
 # mdi-cli
@@ -19,9 +19,9 @@ $ npm install -g mdi-cli
 
 ## Usage
 
-Installing this package globally will give you the `mdi` command. Take a look at this GIF of how to use this it interactively:
+Installing this package globally will give you the `mdi` command. The GIF below shows how to use it interactively:
 
-![Usage Example](example.gif)
+![Usage Example](https://cdn.arnellebalane.com/github/mdi-cli/)
 
 You may also use `mdi` non-interactively, by providing flags and arguments when you run it:
 
