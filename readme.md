@@ -21,7 +21,7 @@ $ npm install -g mdi-cli
 
 Installing this package globally will give you the `mdi` command. The GIF below shows how to use it interactively:
 
-![Usage Example](https://cdn.arnellebalane.com/github/mdi-cli/)
+![Usage Example](https://cdn.arnellebalane.com/github/mdi-cli/example.gif)
 
 You may also use `mdi` non-interactively, by providing flags and arguments when you run it:
 
