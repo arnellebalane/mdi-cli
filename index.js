@@ -114,7 +114,7 @@ const promptOptions = [{
     }
 }];
 
-(async () => {
+(async function() {
     const useBuilder = process.argv.length === 2;
     const config = useBuilder
         ? await inquirer.prompt(promptOptions)
@@ -127,7 +127,8 @@ const promptOptions = [{
     const iconPaths = await mdi(config);
     spinner.stop();
 
-    console.log(); // Add an extra separator line
+    // Add an extra separator line
+    console.log();
     iconPaths.forEach(iconPath => {
         console.log(`  Generated ${chalk.green(iconPath)}`);
     });
