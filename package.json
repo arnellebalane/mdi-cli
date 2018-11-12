@@ -45,5 +45,20 @@
     "ghooks": {
       "pre-push": "npm run lint"
     }
+  },
+  "eslintConfig": {
+    "extends": [
+      "arnellebalane"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "rules": {
+      "max-len": ["off"]
+    }
   }
 }
