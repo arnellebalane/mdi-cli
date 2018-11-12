@@ -58,7 +58,9 @@
       "es6": true
     },
     "rules": {
-      "max-len": ["off"]
+      "max-len": [
+        "off"
+      ]
     }
   }
 }
